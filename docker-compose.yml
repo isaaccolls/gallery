@@ -1,0 +1,25 @@
+version: "3"
+services:
+  piwigo:
+    image: lscr.io/linuxserver/piwigo:latest
+    container_name: piwigo
+    ports:
+      - 80:80
+    volumes:
+      - ./config:/config
+      - ./gallery:/gallery
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    restart: unless-stopped
+  db:
+    image: mariadb
+    volumes:
+      - ./database:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=piwigo
+      - MYSQL_DATABASE=piwigo
+      - MYSQL_USER=piwigo-user
+      - MYSQL_PASSWORD=piwigo-420-kush
+    restart: unless-stopped
