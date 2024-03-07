@@ -2,7 +2,6 @@ version: "3"
 services:
   piwigo:
     image: lscr.io/linuxserver/piwigo:latest
-    container_name: piwigo
     ports:
       - 80:80
     volumes:
