@@ -1,0 +1,6 @@
+# .gitignore
+
+# Ignore Docker data directories
+config/
+gallery/
+database/
