@@ -1,4 +1,5 @@
 # .gitignore
+.env
 
 # Ignore Docker data directories
 config/
