@@ -7,6 +7,7 @@ services:
     volumes:
       - ./config:/config
       - ./gallery:/gallery
+      - ./scripts:/custom-cont-init.d:ro
     environment:
       - PUID=1000
       - PGID=1000
